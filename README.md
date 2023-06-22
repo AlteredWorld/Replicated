@@ -2,4 +2,4 @@
 
 
 
-# Respitory where i store my scripts
+# Respitory where i store my scripts (USUALLY YBA)
