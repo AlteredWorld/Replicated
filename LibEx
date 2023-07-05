@@ -22,7 +22,7 @@ function Library.new(Name)
 	Background.BorderSizePixel = 0
 	Background.Position = UDim2.new(0.270394742, 0, 0.158949986, 0)
 	Background.Size = UDim2.new(0.538537562, 0, 0.626524389, 0)
-	
+
 	local UserInputService = game:GetService("UserInputService")
 
 	local gui = Background
@@ -62,7 +62,7 @@ function Library.new(Name)
 			update(input)
 		end
 	end)
-	
+
 	task.spawn(function()
 		local Changing = false
 		while true do
@@ -165,6 +165,7 @@ function Library.new(Name)
 		TabButton.TextColor3 = Color3.fromRGB(238, 238, 238)
 		TabButton.TextSize = 20.000
 		TabButton.TextWrapped = true
+		TabButton.Text = Name or "TabButton"
 
 		TabButton.MouseButton1Click:Connect(function()
 			for i,v in pairs(Container:GetChildren()) do
@@ -225,9 +226,9 @@ function Library.new(Name)
 				end
 				callback(Value)
 			end)
-			
+
 			UICorner_5.Parent = Toggle_2
-			
+
 			return function(val)
 				Value = val
 			end
@@ -256,13 +257,13 @@ function Library.new(Name)
 
 			UICorner_3.Parent = Button
 		end
-		
+
 		function self_2:Dropdown(Name,List,Callback)
 			local name = Name or "Dropdown"
 			local list = List or {"Button"}
 			local callback = Callback or function() end
 			local selected = ""
-			
+
 			-- Gui to Lua
 			-- Version: 3.2
 
@@ -301,9 +302,9 @@ function Library.new(Name)
 			end)
 
 			UICorner.Parent = Dropdown
-			
+
 			local ScrollingFrameSiz
-			
+
 			ScrollingFrame.Parent = Dropdown
 			ScrollingFrame.Active = true
 			ScrollingFrame.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
@@ -324,7 +325,7 @@ function Library.new(Name)
 			UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
 			UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
 			UIListLayout.VerticalAlignment = Enum.VerticalAlignment.Center
-			
+
 			for i,v in pairs(list) do
 				local Button = Instance.new("TextButton")
 				local UICorner_3 = Instance.new("UICorner")
@@ -406,7 +407,7 @@ function Library.new(Name)
 
 		return self_2
 	end
-	
+
 	function self:Destroy()
 		ScreenGui:Destroy()
 		if getfenv().Connections~=nil then
