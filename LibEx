@@ -418,18 +418,3 @@ function Library.new(Name)
 
 	return self
 end
-
-local Window = Library.new("< Afterglow >")
-local Tab = Window:Tab("Misc")
-local Button = Tab:Button("Yessir",function()
-	print'Button works!'
-end)
-local Dropdown = Tab:Dropdown("Test",{"1","2","3","4"},function(selected)
-	print(selected)
-end)
-local Toggle = Tab:Toggle("Toggle",function(val)
-	print(val)
-end)
-local Text = Tab:Textbox("Test2",function(t)
-	print(t)
-end)
