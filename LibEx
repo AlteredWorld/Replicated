@@ -228,7 +228,7 @@ function Library.new(Name)
 			end)
 
 			UICorner_5.Parent = Toggle_2
-			
+
 			local Funcs = {}
 			function Funcs:SetValue(t)
 				Value=t
@@ -358,12 +358,12 @@ function Library.new(Name)
 
 				UICorner_3.Parent = Button
 			end
-			
+
 			local Funcs = {}
 			function Funcs:SetValue(t)
-			   selected=t
+				selected=t
 			end
-			
+
 			return Funcs
 		end
 
@@ -406,17 +406,17 @@ function Library.new(Name)
 			Input.TextScaled = true
 			Input.TextSize = 14.000
 			Input.TextWrapped = true
-			
+
 			Input:GetPropertyChangedSignal("Text"):Connect(function()
 				input = Input.Text
 			end)
-			
+
 			TextBox.MouseButton1Click:Connect(function()
 				callback(input)
 			end)
 
 			UICorner_7.Parent = Input
-			
+
 			local Funcs = {}
 			function Funcs:SetValue(t)
 				input = t
@@ -439,3 +439,5 @@ function Library.new(Name)
 
 	return self
 end
+
+return Library
